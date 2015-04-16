@@ -1,0 +1,1595 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><style>.codehilite pre .hll { background-color: #f8eec7 }
+.codehilite pre  { background: #ffffff; color: #333333 }
+.codehilite pre .c { color: #999988; font-style: italic } /* Comment */
+.codehilite pre .err { color: #a61717; background-color: #e3d2d2 } /* Error */
+.codehilite pre .k { font-weight: bold } /* Keyword */
+.codehilite pre .n { color: #333333 } /* Name */
+.codehilite pre .o { font-weight: bold } /* Operator */
+.codehilite pre .cm { color: #999988; font-style: italic } /* Comment.Multiline */
+.codehilite pre .cp { color: #999999; font-weight: bold } /* Comment.Preproc */
+.codehilite pre .c1 { color: #999988; font-style: italic } /* Comment.Single */
+.codehilite pre .cs { color: #999988; font-style: italic } /* Comment.Special */
+.codehilite pre .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
+.codehilite pre .ge { font-style: italic } /* Generic.Emph */
+.codehilite pre .gr { color: #aa0000 } /* Generic.Error */
+.codehilite pre .gh { color: #999999 } /* Generic.Heading */
+.codehilite pre .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+.codehilite pre .go { color: #888888 } /* Generic.Output */
+.codehilite pre .gp { color: #555555 } /* Generic.Prompt */
+.codehilite pre .gs { font-weight: bold } /* Generic.Strong */
+.codehilite pre .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.codehilite pre .gt { color: #aa0000 } /* Generic.Traceback */
+.codehilite pre .kc { font-weight: bold } /* Keyword.Constant */
+.codehilite pre .kd { font-weight: bold } /* Keyword.Declaration */
+.codehilite pre .kn { font-weight: bold } /* Keyword.Namespace */
+.codehilite pre .kp { font-weight: bold } /* Keyword.Pseudo */
+.codehilite pre .kr { font-weight: bold } /* Keyword.Reserved */
+.codehilite pre .kt { font-weight: bold } /* Keyword.Type */
+.codehilite pre .m { color: #945277 } /* Literal.Number */
+.codehilite pre .s { color: #df5000 } /* Literal.String */
+.codehilite pre .na { color: #008080 } /* Name.Attribute */
+.codehilite pre .nb { color: #0086b3 } /* Name.Builtin */
+.codehilite pre .nc { color: #445588; font-weight: bold } /* Name.Class */
+.codehilite pre .no { color: #094e99 } /* Name.Constant */
+.codehilite pre .nd { color: #333333 } /* Name.Decorator */
+.codehilite pre .ni { color: #800080 } /* Name.Entity */
+.codehilite pre .ne { color: #990000; font-weight: bold } /* Name.Exception */
+.codehilite pre .nf { color: #945277; font-weight: bold } /* Name.Function */
+.codehilite pre .nl { color: #333333 } /* Name.Label */
+.codehilite pre .nn { color: #555555 } /* Name.Namespace */
+.codehilite pre .nx { color: #333333 } /* Name.Other */
+.codehilite pre .py { color: #333333 } /* Name.Property */
+.codehilite pre .nt { color: #000080 } /* Name.Tag */
+.codehilite pre .nv { color: #008080 } /* Name.Variable */
+.codehilite pre .ow { font-weight: bold } /* Operator.Word */
+.codehilite pre .w { color: #bbbbbb } /* Text.Whitespace */
+.codehilite pre .mb { color: #945277 } /* Literal.Number.Bin */
+.codehilite pre .mf { color: #945277 } /* Literal.Number.Float */
+.codehilite pre .mh { color: #945277 } /* Literal.Number.Hex */
+.codehilite pre .mi { color: #945277 } /* Literal.Number.Integer */
+.codehilite pre .mo { color: #945277 } /* Literal.Number.Oct */
+.codehilite pre .sb { color: #df5000 } /* Literal.String.Backtick */
+.codehilite pre .sc { color: #df5000 } /* Literal.String.Char */
+.codehilite pre .sd { color: #df5000 } /* Literal.String.Doc */
+.codehilite pre .s2 { color: #df5000 } /* Literal.String.Double */
+.codehilite pre .se { color: #df5000 } /* Literal.String.Escape */
+.codehilite pre .sh { color: #df5000 } /* Literal.String.Heredoc */
+.codehilite pre .si { color: #df5000 } /* Literal.String.Interpol */
+.codehilite pre .sx { color: #df5000 } /* Literal.String.Other */
+.codehilite pre .sr { color: #017936 } /* Literal.String.Regex */
+.codehilite pre .s1 { color: #df5000 } /* Literal.String.Single */
+.codehilite pre .ss { color: #8b467f } /* Literal.String.Symbol */
+.codehilite pre .bp { color: #999999 } /* Name.Builtin.Pseudo */
+.codehilite pre .vc { color: #008080 } /* Name.Variable.Class */
+.codehilite pre .vg { color: #008080 } /* Name.Variable.Global */
+.codehilite pre .vi { color: #008080 } /* Name.Variable.Instance */
+.codehilite pre .il { color: #945277 } /* Literal.Number.Integer.Long */</style><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+MathJax.Hub.Config({
+  config: ["MMLorHTML.js"],
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX"],
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+    processEscapes: false
+  },
+  TeX: {
+    extensions: ["AMSmath.js", "AMSsymbols.js"],
+    TagSide: "right",
+    TagIndent: ".8em",
+    MultLineWidth: "85%",
+    equationNumbers: {
+      autoNumber: "AMS",
+    },
+    unicode: {
+      fonts: "STIXGeneral,'Arial Unicode MS'"
+    }
+  },
+  showProcessingMessages: false
+});
+</script>
+<title>resumo-slides</title></head><body><article class="markdown-body"><h1 id="revisao-pra-ihc"><a name="user-content-revisao-pra-ihc" href="#revisao-pra-ihc" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Revisão pra IHC</h1>
+<h2 id="slide-01-usabilidade-1"><a name="user-content-slide-01-usabilidade-1" href="#slide-01-usabilidade-1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Slide 01 - Usabilidade 1</h2>
+<ul>
+<li>
+<p>Por que devemos nos importar sobre a interface de usuário de um software?</p>
+<p>A interface de usuário afeta bastante a percepção do software</p>
+<ul>
+<li>Sotware usável vende melhor</li>
+<li>Web sites ruins de usar são abadonados</li>
+</ul>
+<p>A percepção às vezes é superficial</p>
+<ul>
+<li>Usuários se culpam por falhas da UI</li>
+<li>Pessoas que compram o software nem sempre são o usuário final</li>
+</ul>
+</li>
+<li>
+<p>O custo de errar no design</p>
+<ul>
+<li>Tempo do usuário não está ficando mais barato</li>
+<li>Faça o design correto agora ou pague por isso mais tarde</li>
+<li>Disastres podem acontecer:<ul>
+<li>Máquina de radiação&hellip;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Interfaces não são faceis de projetar</p>
+<ul>
+<li>Você não é o usuário. A maior parte da engenharia de software envolve falar com outros programadores, mas a interface é sobre se comunicar com o usuário</li>
+<li>O usuário sempre está certo. Problemas de consistência são culpa do sistema</li>
+<li>Mas o usuário nem sempre está certo ao mesmo tempo, pois não são designers.</li>
+</ul>
+</li>
+<li>
+<p>Definição de usabilidade</p>
+<ul>
+<li>Usabilidade: quão bem usuários podem usar uma funcionalidade do sistema.</li>
+<li>Dimensões de usabilidade:<ul>
+<li>Aprendizado: o quão fácil é aprender a usar?</li>
+<li>Eficiência: uma vez aprendido, quão rápido se pode usar?</li>
+<li>Visibilidade: O estado do sistema é visível?</li>
+<li>Erros: os erros são recuperáveis?</li>
+<li>Satisfação: a interface é agradável de usar?</li>
+</ul>
+</li>
+<li>Podemos quantificar todas essas medidas de usabilidade.</li>
+</ul>
+</li>
+<li>
+<p>As dimensões não são uniformes para todas as classes de usuários ou aplicações</p>
+<ul>
+<li>Depende do usuário<ul>
+<li>Novos usuários precisam de aprendizado, enquanto usuários infrequentes precisam de interfaces memorizáveis e usuários experiêntes precisam de eficiência.</li>
+</ul>
+</li>
+<li>Mas nenhum usuário é uniformemente novato ou experiente<ul>
+<li>Depende da experiência do domínio, aplicação e característica</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Experiência do usuário</p>
+<ul>
+<li>Uma abordagem holística de como o usuário se relaciona com a interface e também de como funciona o relacionamento com o sistema e produto da qual aquela interface faz parte</li>
+</ul>
+</li>
+</ul>
+<h2 id="slide-2-introducao-a-ihc"><a name="user-content-slide-2-introducao-a-ihc" href="#slide-2-introducao-a-ihc" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Slide 2 - Introdução à IHC</h2>
+<p>Interação homem-computador é uma disciplina preocupada com o design, avaliaçào e implementação de sistemas interativos de computadores para uso humano e com o estudo de fenômenos que acompanham o uso.</p>
+<p>Aspéctos do lado humano da IHC mudam mais devagar, se mudam ao todo. Muito do que se aprendeu sobre nossos processos perceptuais, cognitivos, sociais e emotivos quando interagimos com tecnologias mais velhas se aplicam à interação com tecnologias emergentees do mesmo modo.</p>
+<p>Algumas visões e protótipos foram rapidamente convertidos a uma grande gama de aplicações, enquanto outras levaram décadas e algumas permanecem inutilizadas. Entendendo as razões de resultados diferentes, podemos avaliar as visões de hoje de modo mais realístico.</p>
+<ul>
+<li>
+<p>Base</p>
+<ul>
+<li>Fatores humanos / ergonomia</li>
+<li>Sistemas / Ciência da informação</li>
+<li>Ciência da computação</li>
+<li>Tornar o uso de ferramentas mais eficiente e achar maneiras de representar e distribuir informação rapidamente</li>
+</ul>
+</li>
+<li>
+<p>Evolução do IHC</p>
+<ul>
+<li>Década de 70<ul>
+<li>A meta era motivar desenvolvedores a considerar a características do ser humano e gerar uma abordagem comportamental para entender design de software, programação e uso de sistemas</li>
+<li>Assumia-se a validade do modelo cascata</li>
+<li>Verifica usabilidade depois do sistema ser desenvolvido</li>
+<li>Problemas: modelo cascata é inviável e o usuário demonstra pouco entendimento da interface</li>
+</ul>
+</li>
+<li>Década de 80<ul>
+<li>Abordagem empírica ao design industrial</li>
+<li>Prototipação no início</li>
+<li>Envolvimento de usuários reais</li>
+<li>Desenvolvimento em ciclos de iteração e prototipação para clarificar o problema de design</li>
+</ul>
+</li>
+<li>Década de 90<ul>
+<li>Em 1988 IHC faz parte das 9 áreas centrais da Ciência da Computação</li>
+<li>em 1991 se recomenda a inclusão de IHC nos currículos de CC</li>
+<li>Em 1997 é incluída no Handbook</li>
+<li>Departamentos de CC incluem IHC como área de pesquisa</li>
+<li>O tipo de desenvolvimento passa a ser guiado por objetos mensuráveis, as especificações de usabilidade</li>
+<li>Design participativo, contextual, etnográfico (comportamental)</li>
+<li>Design Rationale: processo de tornar explícitos os processos e resultados de design, como a motivação, requisitos, discussões, debates, negociações e decisões</li>
+</ul>
+</li>
+<li>Anos 2000 - 2010<ul>
+<li>Novos paradigmas</li>
+<li>Novas tecnologias</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>A importância do IHC é resultado de:</p>
+<ul>
+<li>Acesso mais barato a computadores significa que pessoas são mais importantes que máquinas</li>
+<li>Idéias excelentes de interface modeladas a partir de necessidades dos humanos em vez das do sistema</li>
+<li>Evolução das ideias em um produto através de algumas gerações</li>
+<li>As pessoas não mais aceitam produtos com interfaces pobres </li>
+</ul>
+</li>
+</ul>
+<h2 id="slide-3-redesign"><a name="user-content-slide-3-redesign" href="#slide-3-redesign" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Slide 3 - ReDesign</h2>
+<ul>
+<li>
+<p>Comparação de abordagem entre um design gráfico e um programador na hora de realizar um redesign de uma interface:</p>
+<ul>
+<li>Quais áreas da interface foram analisadas?</li>
+<li>Quais foram os problemas percebidos?</li>
+<li>Que caminhos tomaram para resolvê-los?<br />
+A comparação foi realizada em três critérios:<ul>
+<li><strong>Usabilidade</strong>: usuários podem facilmente interagir com a interface para conseguir a informação desejada?</li>
+<li><strong>Funcionalidade</strong>: que funções e controles estão disponíveis para permitir uso otimizado dos dados?</li>
+<li><strong>Comunicação e visual estética</strong>: como a aparência visual e localização espacial dos elementos da interface otimizam funcionalidade?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Análise do Designer:</p>
+<ul>
+<li>Assume a funcionalidade dada e o tipo de aplicação do software</li>
+<li>Assume as restrições de interface do ambiente de execução (SO)</li>
+<li>Tenta ver como interfaces existentes podem ser melhoradas</li>
+<li>Inicia <em>criticando</em> a interface, imaginando diferentes cenários de usuários interagindo com a aplicação pela primeira vez:<ul>
+<li>O que um botão faz?</li>
+<li>Como ver os dados de outra maneira?</li>
+<li>Etc..</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Análise do Programador:</p>
+<ul>
+<li>Não realizou anaálise dos elementos da interface original nem a consistência com <em>guidelines</em></li>
+<li>Descartou a interface complentamente, assumindo que não satisfazia as necessidades do usuário</li>
+<li>Re-desenhou o problema baseado nas próprias necessidades, propondo um design alternativo</li>
+</ul>
+</li>
+<li>
+<p>Lições:</p>
+<ul>
+<li>Ambos tentaram abordar um ponto de vista do usuário<ul>
+<li>Há três caminhos:<ul>
+<li>O designer se considera um usuário em potecial</li>
+<li>O designer simula usuários potenciais</li>
+<li>Se realiza teste com usuários reais</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>O design pela crítica permite focalizar aspéctos de usabilidade e consistência, o que é bom quando há restrição no tempo de design e integridade funcional da aplicação, mas torna difícil de corrigir problemas de funcionalidede</li>
+</ul>
+</li>
+</ul>
+<h2 id="slide-4-usabilidade-2"><a name="user-content-slide-4-usabilidade-2" href="#slide-4-usabilidade-2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Slide 4 - Usabilidade 2</h2>
+<ul>
+<li>
+<p>Definição: O tanto quanto um produto pode ser usado por um usuário para alcançar objetovos com eficácia e satisfação em um contexto de uso especificado.</p>
+</li>
+<li>
+<p>Metas de usabilidade:</p>
+<ul>
+<li>Facilidade de aprendizado</li>
+<li>Eficiência de uso</li>
+<li>Facilidade de retorno</li>
+<li>Freqüência de erros</li>
+<li>Satisfação subjetiva</li>
+</ul>
+</li>
+<li>
+<p>Engenharia de Usabilidade</p>
+<ul>
+<li>Confiar na experiência do designer, em padrões, guidelines ou metodologias racionais e analíticas não é suficiente para chegar a bons sistemas de computador</li>
+</ul>
+</li>
+<li>
+<p>O modelo de engenharia de usabilidade</p>
+<ul>
+<li>Pré-design<ul>
+<li>Conhecer o usuário: características indiviuais e tarefa</li>
+<li>Análise Competitiva</li>
+<li>Metas de Usabilidade</li>
+</ul>
+</li>
+<li>Design<ul>
+<li>Design inicial<ul>
+<li>Métodos participativos</li>
+<li>Guidelines</li>
+<li>Design coordenado</li>
+<li>Padrões; identidade do produto</li>
+</ul>
+</li>
+<li>Desenvolvimento iterativo<ul>
+<li>Prototipagem</li>
+<li>Teste</li>
+<li>Design rationale</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Pós-design<ul>
+<li>Feedback de estudo de campo</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Práticas de maior impácto na usabilidade do sistema:</p>
+<ul>
+<li>Design iterativo, análise de tarefas</li>
+<li>Teste empírico com usuários reais</li>
+<li>Técnicas participativas (?)</li>
+<li>Visita ao local de trabalho do usuário</li>
+</ul>
+</li>
+<li>
+<p>Benefícios</p>
+<ul>
+<li>Economia de tempo</li>
+<li>Economia financeira</li>
+<li>Adoção de produtos adicionais</li>
+</ul>
+</li>
+<li>
+<p>Métodos Heurísticos</p>
+<ul>
+<li>Procedimento<ul>
+<li>Características do sistema são comparadas com as guidelines heurísticas</li>
+<li>Uma lista de incompatibilidades é coletada</li>
+</ul>
+</li>
+<li>Resultados<ul>
+<li>Detalhes onde design difere da guideline</li>
+<li>Facilidade de aprendizado, consistência</li>
+<li>Identificação de problemas menos graves</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Inspeção Heurística</p>
+<ul>
+<li><strong>Passo 1</strong>: Definir as heurísticas de usabilidade<ul>
+<li>As heurísticas são derivadas de princípios básicos de usabilidade</li>
+<li>São realizadas adaptações a um produto específico<ul>
+<li>Guideline de design, pesquisa de mercado, documento de requisitos, análise de tarefas</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Passo 2</strong>: Selecionar time de avaliação<ul>
+<li>Pesquisas empíricas mostram que de 3 a 5 avaliadores são suficientes para identificar 75% dos problemas de usabilidade de um sistema</li>
+</ul>
+</li>
+<li><strong>Passo 3</strong>: Compilar material sobre o sistema<ul>
+<li>Análise de audiência</li>
+<li>Especificação do sistema</li>
+<li>Tarefas do usuário</li>
+<li>Cenários de caso de uso</li>
+</ul>
+</li>
+<li><strong>Passo 4</strong>: Inspeção pelos avaliadores<ul>
+<li>Inspeção individual de 1-2 horas, independente. Avaliadores devem procurar problemas de usabilidade que tanto um usuário novato quanto um mais experiente poderiam se deparar. No processo, devem realizar cada tarefa pelo menos duas vezes, tomando nota para cada problema encontrado</li>
+</ul>
+</li>
+<li><strong>Passo 5</strong>: Feedback dos avaliadores<ul>
+<li>Compilação das notas tomadas durante a inspeção em um relatório estruturado de usabilidade contendo um sumário de todos os problemas de usabilidade encontrados, as heurísticas violadas por esses problemas e idéias de como corrigir esses problemas</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Graus de severidade usados na inspeção heurística</p>
+<ul>
+<li>4: &ldquo;problema catastrófico - correção obrigatória antes de entregar o produto&rdquo;</li>
+<li>3: &ldquo;problema grave - alta prioridade na correção&rdquo;</li>
+<li>2: &ldquo;problema pequeno - baixa prioridade na correção&rdquo;</li>
+<li>1: &ldquo;problema cosmético - corrigir se tiver tempo&rdquo;</li>
+<li>0: &ldquo;não foi identificado problema de usabilidade&rdquo;</li>
+</ul>
+</li>
+<li>
+<p>As 10 heurísticas de usabilidade de Nielson</p>
+<ul>
+<li>H1 - Visibilidade do estado do sistema<ul>
+<li>Manter o usuário informado do que está ocorrendo</li>
+</ul>
+</li>
+<li>H2 - Consistência entre o sistema e o mundo real<ul>
+<li>Sistema deve falar a língua do usuário</li>
+<li>Deve-se seguir convenções do mundo real</li>
+</ul>
+</li>
+<li>H3 - Controle do usuário<ul>
+<li>Usuários devem ter a opção de desfazer uma ação ou sair de um estado indesejado sem ter que passar por um processo extenso</li>
+</ul>
+</li>
+<li>H4 - Consistência de padrões<ul>
+<li>Usuários não devem ter que imaginar se diferentes palavras, situações ou ações significam a mesma coisa</li>
+</ul>
+</li>
+<li>H5 - Prevenção de erros<ul>
+<li>Design cuidadoso que previne a ocorrência de um problema</li>
+</ul>
+</li>
+<li>H6 - Reconhecimento em vez de lembrança<ul>
+<li>Tornar objetos, ações e opções visíveis. O usuário não deve ter que se lembrar de informações de uma parte do diálogo em outra.</li>
+<li>Instruções de uso devem estar visíveis ou facilmente recuperáveis sempre que apropriado</li>
+</ul>
+</li>
+<li>H7 - Flexibilidade e eficiência de uso<ul>
+<li>Aceleradores podem aumentar a velocidade de interação de um usuário avançado de modo que o sistema possa atender a usuários experientes e iniciantes</li>
+</ul>
+</li>
+<li>H8 - Estética e design minimalista<ul>
+<li>Diálogos não devem conter informação que é irrelevante ou raramente necessária.</li>
+<li>Toda unidade de informação extra em um diálogo compete com unidades de informação relevante e diminui sua visibilidade</li>
+</ul>
+</li>
+<li>H9 - Ajuda a reconhecer, diagnosticar e recuperar dados<ul>
+<li>Mensagens de erro devem ser expressa em linguagem plena e clara, indicando precisamente o problema e sugerir uma solução de maneira construtiva</li>
+</ul>
+</li>
+<li>H10 - Ajuda e documentação<ul>
+<li>Mesmo que seja desejável poder utilizar o sistema sem ter que recorrer à documentação, é necessário prover ajuda e documentação</li>
+<li>A informação deve ser fácil de ser buscada, focada na tarefa do usuário, listando passos concretos e não ser muito extensa</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Outros métodos para inspeção de usabilidade</p>
+<ul>
+<li>Avaliação heurística</li>
+<li>Percurso Cognitivo</li>
+<li>Inspeção formal de usabilidade</li>
+<li>Percurso pluralístico</li>
+<li>Inspeção de caracteríticas (<em>features</em>)</li>
+<li>Inspeção de consistência</li>
+<li>Inspeção de padrões</li>
+</ul>
+</li>
+<li>
+<p>Em síntese:</p>
+<ul>
+<li>Métodos de inspeção de usabilidade avaliam aspéctos da usabilidade de um sistema sem fazer teste com o usuário</li>
+<li>Avaliação heurística é um método rápido e efetivo em termos de custo para inspeção de usabilidade</li>
+<li>Envolvem de 3 a 5 experts que avaliam o sustema seguindo um conjunto de heurísticas de usabilidade</li>
+<li>Embora haja um conjunto geral de heurísticas, freqüêntemente precisam ser adaptadas a sistemas específicos</li>
+<li><strong>A avaliação heurística não capta todos os aspectos de usabilidade!</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="slide-5-fundamentos-de-fatores-humanos-em-ihc-1"><a name="user-content-slide-5-fundamentos-de-fatores-humanos-em-ihc-1" href="#slide-5-fundamentos-de-fatores-humanos-em-ihc-1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Slide 5 - Fundamentos de Fatores Humanos em IHC 1</h2>
+<h3 id="o-modelo-de-memoria-humana"><a name="user-content-o-modelo-de-memoria-humana" href="#o-modelo-de-memoria-humana" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>O modelo de memória humana</h3>
+<ul>
+<li>
+<p>Os sistemas de memória humana</p>
+<ul>
+<li>Sistemas sensoriais -&gt; AIS -&gt; MCD -&gt; MLD</li>
+</ul>
+</li>
+<li>
+<p>Armazenamento de informação sensorial (AIS) </p>
+<ul>
+<li>A informação é salva como é recebida pelos orgãos sensoriais</li>
+<li>Mantém uma imagem completa e acurada do mundo como recebida pelo sistema sensorial</li>
+<li>Duração curta: 0.1s a 0.5s</li>
+</ul>
+</li>
+<li>
+<p>Memória de curta duração (MCD)</p>
+<ul>
+<li>A infirmação retida não mais a imagem completa de eventos, mas a interpretação imediata deles</li>
+<li>A informação pode ser mantida indefinidamente por repetição</li>
+<li>Duração: décimos de segundo</li>
+<li>Capacidade limitada: 5 +- 2 itens</li>
+</ul>
+</li>
+<li>
+<p>Memória de longa duração (MLD)</p>
+<ul>
+<li>Não há limite prático para capacidade de MLD</li>
+</ul>
+</li>
+<li>
+<p>O Armazenamento de Informação</p>
+<ul>
+<li>Há duas grandes régiões no cérebro: o hemisfério esquerdo e o direito (córtex), que diferem anatomicamente e possuem nomes diferentes</li>
+<li>Mudanças estruturais e químicas devem ocorres no cérebro, como resultado da aquisição de novo conhecimento<ul>
+<li>MCD: ativação elétrica de um loop neural específico</li>
+<li>MLD: estrutura permanente de circuitos neurais que acontece através de consolidação, que é a codificação química na estrutura de moléculas de proteína em cada sinápse, junto do crescimento de novas junções sinápticas</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Mantendo memória para uma entrada sensorial</p>
+<ul>
+<li>Existem três tipos de resposta do sistema nervoso a um evento <em>X</em>:<ul>
+<li>Um sinal sensorial chegando inicia uma sequência de eventos elétricos que persiste indefinidamente. Isso gera uma reverberação que para somente com entradas estranhas ao loop, ocorrência de novos eventos, fadiga química nos neurônios ou eventos anormais</li>
+<li>MCD ocorre quando há ativação elétrica seletiva de um loop neuronal específico</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="slide-6-fundamentos-de-fatores-humanos-em-ihc-2"><a name="user-content-slide-6-fundamentos-de-fatores-humanos-em-ihc-2" href="#slide-6-fundamentos-de-fatores-humanos-em-ihc-2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Slide 6 - Fundamentos de Fatores Humanos em IHC 2</h2>
+<h3 id="o-modelo-do-processador-de-informacao-humano-mpih"><a name="user-content-o-modelo-do-processador-de-informacao-humano-mpih" href="#o-modelo-do-processador-de-informacao-humano-mpih" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>O Modelo do Processador de Informação Humano (MPIH)</h3>
+<ul>
+<li>Princípios do MPIH<ul>
+<li><strong>Princípio 1</strong>: O tempo do ciclo no processador perceptual varia inversamente com a intensidade do estímulo<ul>
+<li>Lei de Bloch: \(i \ast t = k, t &lt; t_p \)</li>
+</ul>
+</li>
+<li><strong>Princípio 2</strong>: Princípio da especificidade da codificação<ul>
+<li>Operações de codificação específicas realizadas sobre o que é percebido determinam o que é armazenado, e o que é armazendo determina que pistas de recuperação são efetivas em prover acesso a essa informação</li>
+</ul>
+</li>
+<li><strong>Princípio 3</strong>: Princípio da discriminação<ul>
+<li>A dificuldade da recuperação da memória é determinada pelos candidatos que existem na memória relativos às pistas para recuperação</li>
+</ul>
+</li>
+<li><strong>Princípio 4</strong>: Princípio da variabilidade do ciclo do Processador Cognitivo</li>
+<li><strong>Princípio 5</strong>: Lei de Fitts<ul>
+<li>O tempo necessário para mover a mão para um alvo depende somente da precisão relativa requerida, isto é, a razão entre a distância ao alvo e seu tamanho</li>
+<li>\(T_{pos}=l_m log_2(2D/S)\) onde \(l_m = -(t_p + t_c + t_m)/log_2 e\), onde <em>D</em> é a distância entre a mão e o alvo, <em>S</em> a largura do alvo e <em>e</em> o erro</li>
+<li>Em valores experimentais, <em>e</em> = 0.07 e \(l_m = 63\)ms</li>
+</ul>
+</li>
+<li><strong>Princípio 6</strong>: Lei da Prática<ul>
+<li>O tempo \(T_n\) necessário para realizar uma tarefa na n-ésima tentativa é dado por:<ul>
+<li>\(T_n=T_1 n^{-a}\), onde \(a = 0.4\)[0.2 ~ 0.6]</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Princípio 7</strong>: Princípio da Incerteza (Lei de Hick)<ul>
+<li>O tempo T de tomada de decisão aumentada com a incerteza sobre o julgamento da decisão a ser feita e é dado por:<ul>
+<li>\(T=I_c H\), onde <em>H</em> é a entropia de decisão e \(I_c = 150\)ms/bit</li>
+</ul>
+</li>
+<li>para n alternativas igualmente prováveis \(H = log_2(n+1)\)</li>
+<li>Para alternativas com difernetes probabilidades \(p_i\) de ocorrência, \(H = \sum_{i} p_i log_2 (1/p_i + 1)\)</li>
+</ul>
+</li>
+<li><strong>Princípio 8</strong>: Princípio da Racionalidade<ul>
+<li>Uma pesoa age de forma a alcançar suas metas através de ação racional, determinada pela estrutura de tarefa e suas entradas de informação e limitada pelo seu conhecimento e habilidade de processamento:<ul>
+<li>Metas + Tarefas + Operadores + Conhecimento + Limites de processamento -&gt; Comportamento</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Princípio 9</strong>: Princípio do Espaço do Problema<ul>
+<li>A atividade racional na qual as pessoas se engajam para resolver um problema pode ser descrita em termos de um conjunto de estados do conhecimento, operadores para mudar um estado para outro, restrições na aplicação desses operadores e conhecimento para decidir que operador aplicar em seguida</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></article></body></html>
